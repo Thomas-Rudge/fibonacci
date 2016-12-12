@@ -8,6 +8,6 @@ end
 # The recursive method
 def fibs_rec(n, list = Array.new)
   return list if n < 1
-  list.length < 2 ? list << 1 : list << list[-1] + list[-2]
+  list << (list.length < 2 ? 1 : list[-1] + list[-2])
   fibs_rec(n-1, list)
 end
